@@ -11,19 +11,24 @@ class App extends Component {
             gifs: [],
             searchInput: ''
         }
+        console.log(this)
+        this.onFormSubmit = this.onFormSubmit.bind(this);
     }
 
-    onFormSubmit (event) {
-        event.preventDefault();
+    onFormSubmit () {
+        // console.log(event.target.value);
+        // event.preventDefault();
         let searchResult = document.getElementById('search').value;
-        let refinedSearch = searchResult.trim.split(' ').join('+');
-        fetch(`https://api.giphy.com/v1/gifs/search?q=${refinedSearch}&api_key=mcBt20C2QcGGHWR340fiQyy0NGmpmCQ4&limit=10`)
+        console.log(searchResult);
+        console.log(this);
+        // let refinedSearch = searchResult.trim.split(' ').join('+');
+        fetch(`https://api.giphy.com/v1/gifs/search?q=${searchResult}&api_key=NzOQswVIdN6gAYDHUhdhdTMkFMLRsKYB&limit=2`)
         .then(response => {
             return response.json();
         })
         .then(data => {
-            this.setState({gifs: data});
-            console.log()
+            this.setState({gifs: data.data});
+            console.log(this.state.gifs)
         })
     }
 
@@ -31,9 +36,8 @@ class App extends Component {
         return (
             <div className="tc">
                 <Header />
-                <SearchBox onSearch = {this.onFormSubmit}/>
+                <SearchBox onSearch = {this.onFormSubmit} />
                 <GifCard />
-                <div>{document.write(this.state.gifs)}</div>
             </div>
         )
     }
