@@ -1,4 +1,21 @@
+.card {
+    position: relative;
+    display: inline-block;
+}
+
 img {
     border-radius: 10px;
     position: relative;
+    margin: 10px;
+}
+
+.download {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    background-color: #55555570;
+    padding: 3px;
+    border-radius: 4px;
+    font-size:25px;
 }

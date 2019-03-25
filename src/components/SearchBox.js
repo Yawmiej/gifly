@@ -3,7 +3,7 @@ import './SearchBox.css'
 
 const SearchBox = ({onSearch}) => {
     return (
-        <div>
+        <div className="searchForm">
             <input 
                 type="text"
                 placeholder="Search gif"
