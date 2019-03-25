@@ -12,13 +12,13 @@ class App extends Component {
             searchInput: '',
             fetched : 0
         }
-        console.log(this)
+        // console.log(this)
         this.onFormSubmit = this.onFormSubmit.bind(this);
     }
 
     onFormSubmit () {
         let searchResult = document.getElementById('search').value;
-        this.setState({fetched: 1})
+        this.setState({gifs: []})
         // console.log(searchResult);
         // console.log(this);
         let refinedSearch = searchResult.trim().split(' ').join('+');
