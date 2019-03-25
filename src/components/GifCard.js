@@ -6,7 +6,7 @@ const GifCard = (props) => {
     return (
         <div>
             <img src={props.images[0].images.fixed_width_small.url} alt="gif" />
-            <a href="https://media.giphy.com/media/3o6gb9DHccZdmsNSgg/giphy.gif" download>download</a>
+            <a href="https://media.giphy.com/media/3o6gb9DHccZdmsNSgg/giphy.gif" download><i class="fas fa-arrow-down"></i></a>
         </div>
     )
 }
