@@ -1,10 +1,11 @@
 import React from "react";
 import './GifCard.css';
 
-const GifCard = () => {
+const GifCard = (props) => {
+    console.log(props.images[0].images)
     return (
         <div>
-            <img src="https://media.giphy.com/media/3o6gb9DHccZdmsNSgg/giphy.gif" alt="gif" />
+            <img src={props.images[0].images.fixed_width_small.url} alt="gif" />
             <a href="https://media.giphy.com/media/3o6gb9DHccZdmsNSgg/giphy.gif" download>download</a>
         </div>
     )
