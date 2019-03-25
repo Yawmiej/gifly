@@ -1,18 +1,21 @@
 import React from 'react';
 import './SearchBox.css'
 
-const SearchBox = () => {
+const SearchBox = ({search}) => {
     return (
-        <form>
+        <div>
             <input 
                 type="text"
                 placeholder="Search gif"
+                id='search'
+                onChange={search}
             />
-            <input 
-                type="submit"
+            <button 
+                type="button"
                 value="Search"
-            />
-        </form>
+                
+            >Search</button>
+        </div>
     )
 }
 
