@@ -12,7 +12,7 @@ class App extends Component {
             searchInput: ''
         }
         console.log(this)
-        // this.onFormSubmit = this.onFormSubmit.bind(this);
+        this.onFormSubmit = this.onFormSubmit.bind(this);
     }
 
     onFormSubmit () {
