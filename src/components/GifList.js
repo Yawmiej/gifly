@@ -8,7 +8,7 @@ const GifList = ({images}) => {
                     key={i}
                 />
     })
-    console.log(images)
+    
     return (
         <div className="cardWrapper">
            {gifArray}
