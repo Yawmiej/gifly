@@ -17,8 +17,7 @@ class App extends Component {
     onFormSubmit =  () => {
         let searchResult = document.getElementById('search').value;
         this.setState({gifs: []})
-        // console.log(searchResult);
-        // console.log(this);
+
         let refinedSearch = searchResult.trim().split(' ').join('+');
         fetch(`https://api.giphy.com/v1/gifs/search?q=${refinedSearch}&api_key=NzOQswVIdN6gAYDHUhdhdTMkFMLRsKYB&limit=15`)
         .then(response => {
@@ -26,7 +25,6 @@ class App extends Component {
         })
         .then(data => {
             this.setState({gifs: data.data,fetched: 2});
-            // console.log(this.state.gifs)
         })
     }
 
